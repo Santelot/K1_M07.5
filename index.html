@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook K1- M07.5 - SCAMPER</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .banner {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .banner .title {
+            font-size: 1.2em;
+            display: flex;
+            justify-content: space-between;
+        }
+        .banner .subtitle {
+            font-size: 1em;
+            margin-top: 5px;
+            border-top: 1px solid white;
+            padding-top: 5px;
+        }
+        .content {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+        .section {
+            margin-bottom: 15px;
+        }
+        .step-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        .dialogue {
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: right;
+            font-style: italic;
+        }
+        .dropdown {
+            margin-bottom: 20px;
+        }
+        .dropdown select {
+            font-size: 1em;
+            padding: 5px;
+            margin-left: 10px;
+        }
+        .time-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }     
+        .activity { margin-bottom: 30px; }
+        table { width: 100%; border-collapse: collapse; }
+        td { padding: 8px; border: 1px solid #ddd; vertical-align: top; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Playbook K1- M07.5 - SCAMPER</h1>
+        
+        <div class="dropdown">
+            <label for="class-time">Tiempo efectivo de Clase:</label>
+            <select id="class-time" onchange="updateContent()">
+                <option value="50">50 minutos</option>
+                <option value="40">40 minutos</option>
+                <option value="30">30 minutos</option>
+            </select>
+        </div>
+
+        <h2 id="selected-time" class="time-title">Tiempo efectivo de clase: 50 minutos</h2>
+
+        <!-- Actividad 0 -->
+        <div id="activity-0" class="activity">
+            <div class="banner" onclick="toggleContent('revision_materiales')">
+                <div class="title">📚 Actividad 0: Revisión de Materiales ⏰ Tiempo: N/A</div>
+                <div class="subtitle">Reproduce la DIAPOSITIVA 1 para revisar la lista de materiales que tienes que tener listos para la misión.</div>
+            </div>
+            <div id="revision_materiales" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (N/A):</strong> Reproduce la DIAPOSITIVA 1 para revisar la lista de materiales que tienes que tener listos para la misión.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 1 -->
+        <div id="activity-1" class="activity">
+            <div class="banner" onclick="toggleContent('bienvenida')">
+                <div class="title">🎉 Actividad 1: Bienvenida e Introducción ⏰ Tiempo: 1 minuto</div>
+                <div class="subtitle">Saluda a los niños e introduce la misión del día.</div>
+            </div>
+            <div id="bienvenida" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (1 minuto):</strong> Reproduce la Diapositiva 2 "Code Squad" y saluda a los niños mientras introduces la misión del día.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Hola, genios del CODE SQUAD! Bienvenidos a una nueva misión. Hoy vamos a trabajar con la letra 'S' de SCAMPER, que significa Sustituir. Vamos a ayudar a Chico, la máscara de Parachico, a cambiar algo en su diseño para hacerlo aún más especial. ¿Listos para activar sus cerebros creativos? ¡Pero primero, vamos a prepararnos con un poco de movimiento! ¡La canción de SCAMPER nos espera!</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 2 -->
+        <div id="activity-2" class="activity">
+            <div class="banner" onclick="toggleContent('baile_scamper')">
+                <div class="title">💃 Actividad 2: Baile de SCAMPER ⏰ Tiempo: 2 minutos</div>
+                <div class="subtitle">Guía a los niños con estos pasos para aplicar SCAMPER al baile.</div>
+            </div>
+            <div id="baile_scamper" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (2 minutos):</strong> Reproduce la DIAPOSITIVA 3 "Canción SCAMPER" y guía a los niños con estos pasos para aplicar SCAMPER al baile:
+                            <ul>
+                                <li><strong>Paso Inicial</strong> (Derecha, derecha, izquierda, izquierda): Comienza con un paso lateral básico, dos pasos a la derecha y dos a la izquierda.</li>
+                                <li><strong>Sustituir</strong> (Adelante, adelante, atrás, atrás): Cambias los pasos laterales por dos pasos adelante y dos atrás.</li>
+                                <li><strong>Combinar</strong> (Derecha adelante, izquierda atrás): Combinas los movimientos alternando un paso adelante con la derecha y uno atrás con la izquierda.</li>
+                                <li><strong>Adaptar</strong> (Pasos pequeños): Sigues con los pasos combinados, pero ahora los haces pequeños, casi como saltitos.</li>
+                                <li><strong>Proponer</strong> (Movimiento libre con las manos): Mantienes los pasos pequeños, pero ahora los niños pueden añadir movimientos libres con las manos, como quieran.</li>
+                                <li><strong>Eliminar</strong> (Solo pasos pequeños): Eliminas los movimientos de manos y vuelves a hacer solo los pasos pequeños hacia adelante y atrás.</li>
+                                <li><strong>Reorganizar</strong> (Izquierda adelante, derecha atrás): Inviertes la combinación, comenzando con izquierda adelante y derecha atrás.</li>
+                            </ul>
+                        </td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Síganme para que aprendamos a bailar al estilo SCAMPER. No se preocupen si la primera vez no pueden seguir todo lo que dice la canción, para eso es esta canción, para irnos ejercitando y que cada día sea más fácil.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 3 -->
+        <div id="activity-3" class="activity">
+            <div class="banner" onclick="toggleContent('planteamiento_problema')">
+                <div class="title">🛠️ Actividad 3: Planteamiento del Problema ⏰ Tiempo: 1.5 minutos</div>
+                <div class="subtitle">Introduce la historia de Chico, la máscara de Parachico.</div>
+            </div>
+            <div id="planteamiento_problema" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (1 minuto):</strong> Reproduce la Diapositiva 4 "Desafío de Innovación" e introduce la historia de Chico, la máscara de Parachico.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Genios del CODE SQUAD! Hoy tenemos una misión muy especial: vamos a ayudar a Chico, una máscara de Parachico que quiere cambiar algo en su diseño. Pero antes de empezar, veamos la historia de Chico para entender cómo podemos ayudarlo.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (0.5 minutos):</strong> Reproduce la Diapositiva 5 "Video Máscara de Parachico" y haz preguntas para corroborar la comprensión.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Muy bien, genios! Ya conocimos a Chico, la máscara de Parachico. Ahora, antes de ayudarlo, necesitamos asegurarnos de que todos entendemos el desafío. Primero, ¿a quién vamos a ayudar en esta misión? ¡Levanten la mano si saben la respuesta! (Esperar respuestas). ¡Exacto, vamos a ayudar a Chico! ¿Y qué es lo que Chico quiere lograr? (Esperar respuestas). ¡Así es, Chico quiere sustituir algo en su diseño para ser más especial! ¿Y cuál es la herramienta mágica que vamos a usar para ayudarlo? (Esperar respuestas). ¡Correcto, vamos a usar SCAMPER, y hoy nos enfocaremos en la S" de Sustituir! Vamos a pensar en formas de cambiar algunas partes de Chico para hacerlo aún más especial. ¿Listos para comenzar?"</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 4 -->
+        <div id="activity-4" class="activity">
+            <div class="banner" onclick="toggleContent('introduccion_scamper')">
+                <div class="title">🧠 Actividad 4: Introducción a la Metodología SCAMPER ⏰ Tiempo: 1 minuto</div>
+                <div class="subtitle">Explica la importancia de hacer preguntas para innovar.</div>
+            </div>
+            <div id="introduccion_scamper" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (1 minuto):</strong> Reproduce la Diapositiva 6 "S de Sustituir" y explica cómo hacer preguntas con "Sustituir".</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Hoy vamos a aprender una herramienta muy especial que nos ayudará a hacer cambios increíbles: la 'S' de SCAMPER, que significa Sustituir. ¿Saben qué significa Sustituir? ¡Significa cambiar una cosa por otra! Por ejemplo, si tenemos una máscara hecha de madera, podríamos preguntarnos: '¿Qué podríamos cambiar en esta máscara para hacerla diferente?'. Ahora vamos a aprender una fórmula para hacer preguntas que utilizaremos en la siguiente actividad. Esta fórmula nos ayudará a pensar en cómo sustituir partes de la máscara de Chico. ¿Están listos para descubrir cómo?</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 5 -->
+        <div id="activity-5" class="activity">
+            <div class="banner" onclick="toggleContent('metodologia_qtf')">
+                <div class="title">❓ Actividad 5: Metodología QTF ⏰ Tiempo: Variable</div>
+                <div class="subtitle">Presenta el estímulo para hacer preguntas utilizando SCAMPER.</div>
+            </div>
+            <div id="metodologia_qtf" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (0.5 minutos):</strong> Reproduce la Diapositiva 7 "Paso 1 Metodología QTF" y presenta el estímulo para hacer preguntas.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¿Recuerdan de qué está hecha la máscara de Chico? (Esperar respuestas: "De madera"). "¡Exacto! Ahora vamos a usar nuestra fórmula mágica de Sustituir para hacernos una pregunta que nos ayudará a innovar."</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (1 minuto):</strong> Reproduce la Diapositiva 8 "Fórmula Preguntas" y explica cómo usar la fórmula para ayudar a Chico.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> La fórmula es: '¿Por qué otro [material, color, forma] podemos Sustituir [elemento actual]?' Por ejemplo, si la máscara de Chico es de madera, podemos preguntar: '¿Por qué otro material podemos sustituir la madera?' ¿Tal vez por tela o plástico? ¡Ahora vamos a pensar en más preguntas!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 3 (3 minutos):</strong> Reproduce la Diapositiva 9 "Formulación de Preguntas" y guía a los niños en la creación de preguntas.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Muy bien, genios. Ahora que sabemos cómo funciona la fórmula de Sustituir, pensemos en más partes de la máscara de Chico que podríamos cambiar. ¿Qué podríamos sustituir en la máscara? ¿Podemos cambiar el material? ¿El color? ¿La montera que es como el cabello del Parachico? ¡Vamos a crear preguntas y anotarlas en el pizarrón para ayudar a Chico!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 4 (3 minutos):</strong> Reproduce la Diapositiva 10 "Mejorar Preguntas" y explica cómo mejorar las preguntas.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Hicieron preguntas increíbles, pero ahora veamos si podemos hacerlas más específicas. Por ejemplo, en lugar de preguntar '¿Por qué otro material podemos sustituir la madera?', podemos preguntar '¿Por qué material resistente al agua podemos sustituir la madera?'. ¡Vamos a hacer nuestras preguntas aún más detalladas!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 5 (3 minutos):</strong> Reproduce la Diapositiva 11 "Ejemplo Pregunta Específica" y facilita el proceso para que los niños mejoren sus preguntas.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Vamos a revisar algunas preguntas. Esta dice: '¿Por qué otro material podemos sustituir la madera?' ¿Podemos hacerla más específica? ¿Qué tal si preguntamos: '¿Por qué otro material más ligero o más flexible podemos sustituir la madera?' Ahora vamos a tomar cada pregunta y hacerla más específica. ¡Vamos a mejorar todas nuestras preguntas para que Chico pueda tener muchas ideas nuevas!</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 6 -->
+        <div id="activity-6" class="activity">
+            <div class="banner" onclick="toggleContent('prototipado_mascaras')">
+                <div class="title">🖍️ Actividad 6: Prototipado en Papel de Máscaras ⏰ Tiempo: Variable</div>
+                <div class="subtitle">Aplica las preguntas formuladas en el diseño de la máscara.</div>
+            </div>
+            <div id="prototipado_mascaras" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (0.5 minutos):</strong> Reproduce la Diapositiva 12 "Innovando Máscaras" y explica que vamos a aplicar las preguntas para ayudar a Chico.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Muy bien, CODE SQUAD, es hora de poner en práctica nuestras preguntas. Vamos a dibujar nuestra propia máscara de Parachico, pero esta vez vamos a hacer algunos cambios basados en las preguntas que creamos. ¡Vamos a darle un nuevo estilo a Chico!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (1 minuto):</strong> Reproduce la Diapositiva 13 "Entregar Materiales" y distribuye papel y colores.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Aquí tienen su papel y colores. Vamos a ir paso a paso utilizando las preguntas que creamos para diseñar una nueva máscara para Chico. ¡Asegúrense de usar toda su creatividad!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 3 (5-10 minutos):</strong> Reproduce la Diapositiva 14 "Diseñar Máscara" y lee las preguntas que hacen alusión a una parte de la máscara.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Vamos con la primera pregunta: ¿Por qué material podemos sustituir la madera? Si alguien quiere hacer la máscara de tela, pueden escoger un color que represente la tela. Si la quieren hacer de otro material, escojan un color que lo represente. ¡Dibujen su máscara con ese nuevo material!</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 7 -->
+        <div id="activity-7" class="activity">
+            <div class="banner" onclick="toggleContent('presentacion_tecnologia')">
+                <div class="title">💡 Actividad 7: Presentación de Tecnología ⏰ Tiempo: Variable</div>
+                <div class="subtitle">Explica cómo agregar la tecnología de circuitos de papel con luces LED.</div>
+            </div>
+            <div id="presentacion_tecnologia" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (2 minutos):</strong> Reproduce la Diapositiva 15 "Presentación de Tecnología" y explica la adición de tecnología al reto.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Muy bien, CODE SQUAD! Chico está emocionado por ver los nuevos diseños que crearon. Pero, para que sus máscaras sean aún más sorprendentes, vamos a agregar un toque especial usando circuitos de papel con luces LED. ¡Les mostraré cómo esta tecnología puede hacer que las máscaras brillen de verdad!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (2 minutos):</strong> Reproduce la Diapositiva 16 "Video Tecnología LED" y facilita preguntas para revisar la comprensión.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Genios, qué impresionante es lo que podemos hacer con circuitos de papel! Ahora, repasemos: ¿Qué necesitamos para crear un circuito? ¡Correcto, necesitamos cinta de cobre, un LED y una batería! ¿Y cómo se conecta todo? ¡Así es, unimos todo para que la electricidad fluya y el LED se encienda! ¿Listos para usar esta tecnología en sus máscaras?</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 3 (1 minuto):</strong> Reproduce la Diapositiva 17 "Máscaras con Circuitos de Papel" y muestra ejemplos de máscaras con tecnología LED.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Ahora miren estas máscaras que fueron creadas usando circuitos de papel. Algunas tienen luces en los ojos, otras en los bordes. ¡Son realmente creativas! Vean cómo brillan y hagan sus propias ideas para sus máscaras.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 4 (5-8 minutos):</strong> Reproduce la Diapositiva 18 "Integración de Tecnología" y guía la integración de los circuitos en los diseños.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Es hora de llevar sus diseños al siguiente nivel. Justo detrás de donde dibujaron su máscara, piensen en cómo podrían agregar luces usando circuitos de papel. ¿Dónde les gustaría que las luces brillen? ¡Vamos a darle vida a las máscaras de Chico con esta tecnología!</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 8 -->
+        <div id="activity-8" class="activity">
+            <div class="banner" onclick="toggleContent('presentacion_mascaras')">
+                <div class="title">🎨 Actividad 8: Presentación de Máscaras ⏰ Tiempo: 3 minutos</div>
+                <div class="subtitle">Organiza la presentación de las máscaras en grupos de 3.</div>
+            </div>
+            <div id="presentacion_mascaras" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (3 minutos):</strong> Reproduce la Diapositiva 19 "Presentación Máscaras" y organiza la presentación en grupos de 3.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Genios del CODE SQUAD, llegó el momento de mostrar el increíble trabajo que hicieron! Vamos a organizarnos en grupos de tres y, uno a uno, van a presentar su máscara al equipo. Explíquenles qué cambios hicieron en su diseño usando la 'S' de Sustituir y dónde integraron la tecnología de luces LED.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 9 -->
+        <div id="activity-9" class="activity">
+            <div class="banner" onclick="toggleContent('conclusion_historia')">
+                <div class="title">🏁 Actividad 9: Conclusión y Reflexión ⏰ Tiempo: 1 minuto</div>
+                <div class="subtitle">Felicita al CODE SQUAD por su trabajo.</div>
+            </div>
+            <div id="conclusion_historia" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (1 minuto):</strong> Reproduce la Diapositiva 20 "Conclusión y Cierre" y felicita al CODE SQUAD por su trabajo.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡CODE SQUAD, lo hicieron increíble! Sus máscaras son únicas y especiales gracias a la 'S' de SCAMPER. Chico está impresionado con todas las ideas que tuvieron para sustituir diferentes partes de su diseño. ¡Estoy segura de que sus ideas harán que Chico sea aún más memorable en las próximas celebraciones!</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+
+        function updateContent() {
+            var time = document.getElementById("class-time").value;
+            document.getElementById("selected-time").innerText = "Tiempo efectivo de clase: " + time + " minutos";
+
+            // Filtrar pasos con tiempo 0 según el tiempo seleccionado
+            var activities = document.querySelectorAll('.activity');
+            activities.forEach(function(activity) {
+                var steps = activity.querySelectorAll('tr');
+                steps.forEach(function(step) {
+                    var stepTime = parseInt(step.getAttribute('data-time-' + time), 10);
+                    if (stepTime === 0) {
+                        step.style.display = 'none';
+                    } else {
+                        step.style.display = 'table-row';
+                    }
+                });
+            });
+        }
+
+        // Inicializar el contenido según las selecciones por defecto
+        updateContent();
+    </script>
+</body>
+</html>
+
+
